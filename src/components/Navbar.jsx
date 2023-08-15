@@ -10,8 +10,8 @@ function Navbar() {
 
   const handleLogout = () => {
     clearAuthToken();
-    loginActions.logout(setLoginState); // Mettre à jour l'état de connexion
-    navigate('/auth');
+    loginActions.logout(setLoginState);
+    navigate('/');
   };
 
   return (
@@ -20,7 +20,7 @@ function Navbar() {
         {loginState.isLoggedIn ? (
           <>
             <Link to="/profile" className="nav-link">Mon profil</Link>
-            <button onClick={handleLogout}>Déconnexion</button>
+            <button onClick={handleLogout} className="nav-link">Déconnexion</button>
           </>
         ) : (
           <Link to="/auth" className="nav-link">S&apos;inscrire</Link>

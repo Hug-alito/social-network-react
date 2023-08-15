@@ -18,8 +18,6 @@ if (token) {
     userId: decodedToken.id,
     token: token,
   };
-
-  console.log(decodedToken)
 }
 
 export const loginAtom = atom(initialLoginState);
